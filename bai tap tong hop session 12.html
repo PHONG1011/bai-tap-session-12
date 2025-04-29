@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Chức Năng</title>
+</head>
+<body>
+  <script>
+    let name = "phong"; // Biến lưu tên người dùng
+    let age = 30;   // Biến lưu tuổi người dùng
+
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    while (true) {
+      // Hiển thị menu
+      let choice = Number(prompt(
+        "Chọn một chức năng:\n" +
+        "1: Nhập tên của người dùng\n" +
+        "2: Nhập tuổi của người dùng\n" +
+        "3: In tên và tuổi của người dùng\n" +
+        "4: In bảng cửu chương của một số\n" +
+        "5: Kiểm tra số nhập vào là số chẵn hay lẻ\n" +
+        "6: Tính tổng các số từ 1 đến N\n" +
+        "7: In các số trong một dãy\n" +
+        "8: Kiểm tra số nhập vào có phải là số nguyên tố hay không\n" +
+        "9: In chuỗi đảo ngược của một chuỗi\n" +
+        "10: Thoát khỏi chương trình"
+      ));
+
+      switch (choice) {
+        case 1:
+          name = prompt("Nhập tên của bạn:");
+          break;
+
+        case 2:
+          age = Number(prompt("Nhập tuổi của bạn:"));
+          break;
+
+        case 3:
+          alert("Tên: " + name + "\nTuổi: " + age);
+          break;
+
+        case 4:
+          let number = Number(prompt("Nhập một số để in bảng cửu chương:"));
+          let table = "";
+          for (let i = 1; i <= 10; i++) {
+            table += `${number} x ${i} = ${number * i}\n`;
+          }
+          alert(table);
+          break;
+
+        case 5:
+          let num = Number(prompt("Nhập một số:"));
+          if (num % 2 === 0) {
+            alert(num + " là số chẵn.");
+          } else {
+            alert(num + " là số lẻ.");
+          }
+          break;
+
+        case 6:
+          let n = Number(prompt("Nhập N:"));
+          let sum = 0;
+          for (let i = 1; i <= n; i++) {
+            sum += i;
+          }
+          alert("Tổng các số từ 1 đến " + n + " là: " + sum);
+          break;
+
+        case 7:
+          let array = prompt("Nhập dãy số, cách nhau bởi dấu phẩy (,):").split(",");
+          alert("Dãy số bạn đã nhập: " + array.join(", "));
+          break;
+
+        case 8:
+          let primeCheck = Number(prompt("Nhập một số:"));
+          if (isPrime(primeCheck)) {
+            alert(primeCheck + " là số nguyên tố.");
+          } else {
+            alert(primeCheck + " không phải là số nguyên tố.");
+          }
+          break;
+
+        case 9:
+          let str = prompt("Nhập một chuỗi:");
+          let reversedStr = str.split("").reverse().join("");
+          alert("Chuỗi đảo ngược: " + reversedStr);
+          break;
+
+        case 10:
+          alert("Thoát khỏi chương trình.");
+          console.log("Chương trình đã kết thúc.");
+          exit();
+          break;
+
+        default:
+          alert("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
+      }
+    }
+  </script>
+</body>
+</html>
