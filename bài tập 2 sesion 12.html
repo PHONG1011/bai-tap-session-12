@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bài tập 2 sesion 12</title>
+</head>
+<body>
+  <script>
+    // bài 1: Nhập nhiệt độ bằng độ C
+    let celsius = Number(prompt("Nhập nhiệt độ (°C):"));
+    let fahrenheit = (celsius * 9/5) + 32;
+    alert(celsius + "°C tương đương với " + fahrenheit.toFixed(2) + "°F");
+
+    console.log(celsius + "°C tương đương với " + fahrenheit.toFixed(2) + "°F");
+
+    // bài 2 Nhập chiều dài bằng mét
+    let meters = Number(prompt("Nhập chiều dài (mét):"));
+    let feet = meters * 3.28084;
+    alert(meters + " mét tương đương với " + feet.toFixed(2) + " feet");
+
+    console.log(meters + " mét tương đương với " + feet.toFixed(2) + " feet");
+
+    // bài 3 Nhập cạnh của hình vuông
+    let c = Number(prompt("Nhập độ dài cạnh của hình vuông (a):"));
+    let arei = c * c;
+
+    alert("Diện tích hình vuông có cạnh " + c + " là: " + arei);
+    console.log("Diện tích hình vuông có cạnh " + c + " là: " + arei);
+
+    // bài 4 Nhập chiều dài và chiều rộng của hình chữ nhật
+    let a = Number(prompt("Nhập chiều dài của hình chữ nhật (a):"));
+    let b = Number(prompt("Nhập chiều rộng của hình chữ nhật (b):"));
+    let area = a * b;
+
+    alert("Diện tích hình chữ nhật có chiều dài " + a + " và chiều rộng " + b + " là: " + area);
+    console.log("Diện tích hình chữ nhật có chiều dài " + a + " và chiều rộng " + b + " là: " + area);
+
+    // bài 5 Nhập hai cạnh kề của tam giác vuông
+    let d = Number(prompt("Nhập độ dài cạnh kề thứ nhất (d):"));
+    let k = Number(prompt("Nhập độ dài cạnh kề thứ hai (k):"));
+
+    let areu = (d * k) / 2;
+
+    alert("Diện tích tam giác vuông có hai cạnh kề " + d + " và " + k + " là: " + areu);
+    console.log("Diện tích tam giác vuông có hai cạnh kề " + d + " và " + k + " là: " + areu);
+    
+     // bài 6 Nhập hệ số a và b
+     let m = Number(prompt("Nhập hệ số m (m ≠ 0):"));
+    let n = Number(prompt("Nhập hệ số n:"));
+    if (m === 0) {
+      if (n === 0) {
+        alert("Phương trình vô số nghiệm.");
+        console.log("Phương trình vô số nghiệm.");
+      } else {
+        alert("Phương trình vô nghiệm.");
+        console.log("Phương trình vô nghiệm.");
+      }
+    } else {
+      let x = -n / m; // Tính nghiệm
+      alert("Phương trình có nghiệm x = " + x.toFixed(2));
+
+      console.log("Phương trình có nghiệm x = " + x.toFixed(2));
+    }
+
+
+  </script>
+</body>
+</html>
