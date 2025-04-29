@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>session 12</title>
+</head>
+<body>
+  <script>
+    // bai 11
+    let n = 10;
+    let a = 0, b = 1;
+    let s = 0;
+    console.log("Dãy Fibonacci:");
+
+    while (s < n) {
+    console.log(a);
+    let temp = a + b;
+    a = b;
+    b = temp;
+    s++;
+  }
+// bai 2
+  let num = 5;
+  let giaiThua = 1;
+  let i = 1;
+
+  do {
+    giaiThua *= i;
+    i++;
+  } while (i <= num);
+
+  console.log("Giai thừa của " + num + " là: " + giaiThua);
+
+  // bai 3
+  // góc vuông dưới bên trái
+  for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "* ";
+    }
+    console.log(row);
+}
+  // góc vuông trên bên phải
+  for (let i = 5; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "* ";
+    }
+    console.log(row);
+}
+  // góc vuông dưới bên phải
+  for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= 5 - i; j++) {
+        row += "  ";
+    }
+    for (let k = 1; k <= i; k++) {
+        row += "* ";
+    }
+    console.log(row);
+}
+// góc vuông trên bên phải
+for (let i = 5; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= 5 - i; j++) {
+        row += "  ";
+    }
+    for (let k = 1; k <= i; k++) {
+        row += "* ";
+    }
+    console.log(row);
+}
+
+    //  bai 4
+    let width = 20;
+    let height = 10;
+
+    for (let i = 1; i <= height; i++) {
+    let row = "";
+    for (let j = 1; j <= width; j++) {
+        if (i === 1 || i === height || j === 1 || j === width) {
+            row += "* ";
+        } else {
+            row += "  ";
+        }
+    }
+    console.log(row);
+}
+   // bai 5
+   let tienGoc = 1000000; // ví dụ: 1 triệu
+   let soThang = 12;
+   let laiSuatThang = 0.05; // 5% mỗi tháng
+
+   let thang = 1;
+   while (thang <= soThang) {
+   tienGoc += tienGoc * laiSuatThang;
+   thang++;
+}
+
+console.log("Tổng tiền sau " + soThang + " tháng là: " + tienGoc.toFixed(2));
+
+  </script>
+</body>
+</html>
