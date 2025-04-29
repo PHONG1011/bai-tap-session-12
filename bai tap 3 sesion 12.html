@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20 Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+  <script>
+    // Hàm kiểm tra số nguyên tố
+    function isPrime(num) {
+      if (num < 2) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+
+    
+    let count = 0; 
+    let num = 2; 
+    let primeNumbers = []; 
+    while (count < 20) {
+      if (isPrime(num)) {
+        primeNumbers.push(num); 
+        count++; 
+      }
+      num++; 
+    }
+
+    // Hiển thị kết quả
+    alert("20 số nguyên tố đầu tiên là: " + primeNumbers.join(", "));
+    console.log("20 số nguyên tố đầu tiên là: " + primeNumbers.join(", "));
+  </script>
+</body>
+</html>
