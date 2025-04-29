@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đếm từ 1 đến 100</title>
+</head>
+<body>
+  <script>
+    // bai 1 Sử dụng vòng lặp for để đếm từ 1 đến 100
+    for (let i = 1; i <= 100; i++) {
+      console.log(i); // Hiển thị số hiện tại trong console
+      if (i === 99) {
+        alert("Đã hoàn thành! Số hiện tại là 99.");
+      }
+    }
+
+    // bài 2 sesion 12 Lấy thông tin nhiệt độ từ người dùng
+    let temperature = Number(prompt("Nhập nhiệt độ hiện tại:"));
+
+    
+    if (temperature > 100) {
+      alert("Nhiệt độ quá cao! Vui lòng giảm nhiệt độ.");
+    } else if (temperature < 20) {
+      alert("Nhiệt độ quá thấp! Vui lòng tăng nhiệt độ.");
+    } else {
+      alert("Nhiệt độ hiện tại ổn định.");
+    }
+
+    // bài 3 Hàm tính dãy Fibonacci
+    function generateFibonacci(n) {
+      let fibonacci = [0, 1]; // Khởi tạo 2 số đầu tiên của dãy Fibonacci
+      for (let i = 2; i < n; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]; // Tính số tiếp theo
+      }
+      return fibonacci;
+    }
+
+    // Lấy 20 số đầu tiên trong dãy Fibonacci
+    let fibonacciNumbers = generateFibonacci(20);
+
+    // Hiển thị kết quả
+    alert("20 số Fibonacci đầu tiên là: " + fibonacciNumbers.join(", "));
+    console.log("20 số Fibonacci đầu tiên là: " + fibonacciNumbers.join(", "));
+
+    // bài 4 Hàm tính dãy Fibonacci
+    function generateFibonacci(n) {
+      let fibonacci = [0, 1]; // Khởi tạo 2 số đầu tiên của dãy Fibonacci
+      for (let i = 2; i < n; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2]; // Tính số tiếp theo
+      }
+      return fibonacci;
+    }
+
+    // Tìm số đầu tiên trong dãy Fibonacci chia hết cho 5
+    function findFirstFibonacciDivisibleBy5() {
+      let a = 0, b = 1; // Khởi tạo hai số đầu tiên
+      while (true) {
+        let next = a + b; // Tính số Fibonacci tiếp theo
+        if (next % 5 === 0) {
+          return next; // Trả về số đầu tiên chia hết cho 5
+        }
+        a = b; // Cập nhật giá trị
+        b = next;
+      }
+    }
+
+    let result = findFirstFibonacciDivisibleBy5();
+    alert("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: " + result);
+    console.log("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: " + result);
+
+     // bai 5 Hàm tính dãy Fibonacci
+     function generateFibonacci(n) {
+      let fibonaccy = [0, 1]; // Khởi tạo 2 số đầu tiên của dãy Fibonacci
+      for (let i = 2; i < n; i++) {
+        fibonaccy[i] = fibonaccy[i - 1] + fibonaccy[i - 2]; // Tính số tiếp theo
+      }
+      return fibonacci;
+    }
+
+    
+    let fibonaccyNumbers = generateFibonacci(20);
+
+    let sum = fibonaccyNumbers.reduce((acc, num) => acc + num, 0);
+    alert("Tổng của 20 số Fibonacci đầu tiên là: " + sum);
+    console.log("Tổng của 20 số Fibonacci đầu tiên là: " + sum);
+
+    // bài 6 Tính tổng của 30 số chia hết cho 7 đầu tiên
+    let count = 0;
+    let sumi = 0; 
+    let num = 1;
+
+    while (count < 30) {
+      if (num % 7 === 0) { 
+        sumi += num;
+        count++; 
+      }
+      num++; 
+    }
+
+    // Hiển thị kết quả
+    alert("Tổng của 30 số chia hết cho 7 đầu tiên là: " + sumi);
+    console.log("Tổng của 30 số chia hết cho 7 đầu tiên là: " + sumi);
+
+    // bai 7 Vòng lặp từ 1 đến 100
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz"); // Chia hết cho cả 3 và 5
+      } else if (i % 3 === 0) {
+        console.log("Fizz"); // Chia hết cho 3
+      } else if (i % 5 === 0) {
+        console.log("Buzz"); // Chia hết cho 5
+      } else {
+        console.log(i); // Không chia hết cho 3 hoặc 5
+      }
+    }
+
+  </script>
+</body>
+</html>
